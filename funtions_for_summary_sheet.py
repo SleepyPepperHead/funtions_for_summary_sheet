@@ -117,7 +117,7 @@ colors=[
 markers = ['o']*7 + ['x']*7
 sizes = [20] * 7 + [40] *7
 for type, color, marker, size in zip(types,colors,markers,sizes):
-    df = summaty[summary['type']==type]
+    df = summary[summary['type']==type]
     temTi, temAl = [], []
     for path in df.path:
         temdf = pd.read_excel(path)

@@ -97,6 +97,9 @@ def scatter_log(ax, x, y, size, color, marker, label):
     # ncol=3, mode="expand", borderaxespad=0.)
 
 '''
+Example plotting Al verse Ti:
+summary = pd.read_excel()
+
 fig, (ax1,ax2) = plt.subplots(2,1,figsize=(9,12))
 types = [
     'epithermal', 'porphyry', 'orogenic', 'pegmatite',  
@@ -114,7 +117,7 @@ colors=[
 markers = ['o']*7 + ['x']*7
 sizes = [20] * 7 + [40] *7
 for type, color, marker, size in zip(types,colors,markers,sizes):
-    df = sm[sm['type']==type]
+    df = summaty[summary['type']==type]
     temTi, temAl = [], []
     for path in df.path:
         temdf = pd.read_excel(path)

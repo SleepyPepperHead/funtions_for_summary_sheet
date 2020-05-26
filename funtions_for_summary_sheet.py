@@ -71,7 +71,20 @@ def limit_to_nan(path: str, elements=None, index_col: int = 0) -> None:
     df.to_excel(path)
     print('Done ', path)
 
-
+    
+def raise_the_final(save=False):
+    summary = pd.read_excel(r'path to the summaru file')
+    whole = []
+    for i, path in enumerate(summary.path):
+        temdf = pd.read_excel(path, index_col=0)
+        temdf[subqtype'] = summary['subtype'].iloc[i]
+        temdf['name'] = summary['name'].iloc[i]
+        temdf['refer'] = summary['refer'].iloc[i]
+    final = pd.concat(whole, ignore_index=True)
+    print(final.shape)
+    if save:
+        final.to_excel('final.xlsx)
+    return final
 
 def scatter_log(ax, x, y, size, color, marker, label):
     """
